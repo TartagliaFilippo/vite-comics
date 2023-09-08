@@ -36,6 +36,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   background-color: white;
+  margin: 30px 0;
 
   .container {
     width: 80%;
@@ -50,6 +51,7 @@ export default {
     ul {
       list-style: none;
       display: flex;
+      align-items: center;
       gap: 10px;
     }
   }

@@ -36,7 +36,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   background-color: white;
-  margin: 30px 0;
+  margin: 30px 0 20px;
 
   .container {
     width: 80%;

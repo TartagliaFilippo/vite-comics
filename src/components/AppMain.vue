@@ -1,4 +1,6 @@
 <script>
+import CardMain from "./CardMain.vue";
+
 export default {
   data() {
     return {
@@ -88,6 +90,7 @@ export default {
       ],
     };
   },
+  components: { CardMain },
 };
 </script>
 
@@ -95,11 +98,17 @@ export default {
   <div class="wrapper">
     <div class="bg-section"></div>
     <div class="container">
-      <div class="button"></div>
-      <div class="cards">
-        <div class="image"></div>
-        <div class="title-cartoon"></div>
+      <div class="button">
+        <h1>CURRENT SERIES</h1>
       </div>
+      <div class="container-cards">
+        <CardMain
+          v-for="itemDetail in cartoons"
+          :key="itemDetail.series"
+          :item="itemDetail"
+        ></CardMain>
+      </div>
+
       <h1>--&gt content goes here &lt--</h1>
     </div>
   </div>
@@ -119,6 +128,13 @@ export default {
   .container {
     width: 80%;
     margin: 0 auto;
+
+    .container-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
 
     h1 {
       color: white;

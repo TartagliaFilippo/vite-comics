@@ -1,0 +1,13 @@
+@mixin flexCenter($type) {
+  display: flex;
+  @if ($type == "orizzontally") {
+    justify-content: center;
+  }
+  @if ($type == "vertically") {
+    align-items: center;
+  }
+  @if ($type == "both") {
+    align-items: center;
+    justify-content: center;
+  }
+}

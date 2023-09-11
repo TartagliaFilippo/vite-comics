@@ -155,10 +155,12 @@ export default {
     }
 
     .button-loading {
+      margin-top: 40px;
+
       h3 {
         background-color: #097ff9;
         text-align: center;
-        padding: 3px 5px;
+        padding: 3px 25px;
       }
     }
   }

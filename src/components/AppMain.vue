@@ -15,11 +15,12 @@ export default {};
   background-color: black;
   height: 100px;
 
+  display: flex;
+  align-items: center;
+
   .container {
     width: 80%;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
 
     h1 {
       color: white;

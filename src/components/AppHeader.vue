@@ -25,7 +25,7 @@ export default {
     <div class="container">
       <img :src="'../../public/img/' + pathImageLogo" alt="" />
       <ul>
-        <li v-for="title of titlesGroup">
+        <li v-for="title in titlesGroup">
           {{ title }}
         </li>
       </ul>

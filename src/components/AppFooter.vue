@@ -85,7 +85,7 @@ export default {
     <div class="top-footer">
       <div class="container">
         <ul>
-          <li v-for="item of topFooter">
+          <li v-for="item in topFooter">
             <div class="buy-image">
               <img :src="'../../public/img/' + item.image" alt="" />
             </div>
@@ -100,23 +100,23 @@ export default {
         <div class="col">
           <h2>{{ mainFooter[0].title }}</h2>
           <ul>
-            <li v-for="item of mainFooter[0].items">{{ item }}</li>
+            <li v-for="item in mainFooter[0].items">{{ item }}</li>
           </ul>
           <h2>{{ mainFooter[1].title }}</h2>
           <ul>
-            <li v-for="item of mainFooter[1].items">{{ item }}</li>
+            <li v-for="item in mainFooter[1].items">{{ item }}</li>
           </ul>
         </div>
         <div class="col">
           <h2>{{ mainFooter[2].title }}</h2>
           <ul>
-            <li v-for="item of mainFooter[2].items">{{ item }}</li>
+            <li v-for="item in mainFooter[2].items">{{ item }}</li>
           </ul>
         </div>
         <div class="col">
           <h2>{{ mainFooter[3].title }}</h2>
           <ul>
-            <li v-for="item of mainFooter[3].items">{{ item }}</li>
+            <li v-for="item in mainFooter[3].items">{{ item }}</li>
           </ul>
         </div>
       </div>
@@ -129,7 +129,7 @@ export default {
         <div class="social">
           <h1>FOLLOW US</h1>
           <ul>
-            <li v-for="image of bottomFooter">
+            <li v-for="image in bottomFooter">
               <img :src="'../../public/img/' + image" alt="" />
             </li>
           </ul>
@@ -146,6 +146,7 @@ export default {
   flex-direction: column;
 
   .top-footer {
+    margin: 20px 0;
     .container {
       width: 80%;
       margin: 0 auto;
@@ -153,7 +154,7 @@ export default {
       ul {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
 
         li {
           list-style: none;
@@ -161,10 +162,11 @@ export default {
           align-items: center;
 
           .buy-image {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
+            gap: 5px;
 
             img {
               max-width: 100%;
@@ -172,7 +174,8 @@ export default {
             }
           }
           .text {
-            font-size: 12px;
+            font-size: 10px;
+            color: white;
           }
         }
       }
@@ -184,13 +187,18 @@ export default {
     .container {
       width: 80%;
       color: white;
-      margin: 0 auto;
+      margin: 30px auto;
       display: flex;
       gap: 30px;
 
       ul {
         list-style: none;
         padding: 0;
+
+        li {
+          color: #6a7e80;
+          font-size: 12px;
+        }
       }
     }
   }
@@ -199,13 +207,14 @@ export default {
 
     .container {
       width: 80%;
-      margin: 0 auto;
+      margin: 20px auto;
 
       display: flex;
       justify-content: space-between;
       align-items: center;
 
       .button {
+        font-size: 14px;
         height: 40px;
         width: 15%;
         padding: 3px 5px;
@@ -220,15 +229,28 @@ export default {
       .social {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
 
         h1 {
+          font-size: 20px;
           color: #097ff9;
+          margin-right: 20px;
         }
 
         ul {
           list-style: none;
           display: flex;
           gap: 15px;
+
+          li {
+            width: 28px;
+            display: flex;
+            align-items: center;
+
+            img {
+              max-width: 100%;
+            }
+          }
         }
       }
     }

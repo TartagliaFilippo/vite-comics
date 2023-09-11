@@ -36,7 +36,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   background-color: white;
-  margin: 30px 0 20px;
+  margin: 10px 0;
 
   .container {
     width: 80%;
@@ -53,6 +53,15 @@ export default {
       display: flex;
       align-items: center;
       gap: 10px;
+      font-weight: bold;
+
+      li {
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0px 52px 0px -4px #0282f9;
+        }
+      }
     }
   }
 }

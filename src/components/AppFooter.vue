@@ -196,7 +196,7 @@ export default {
         padding: 0;
 
         li {
-          color: #6a7e80;
+          color: #6f6f6f;
           font-size: 12px;
         }
       }

@@ -108,8 +108,9 @@ export default {
           :item="itemDetail"
         ></CardMain>
       </div>
-
-      <h1>--&gt content goes here &lt--</h1>
+      <div class="button-loading">
+        <h3>LOAD MORE</h3>
+      </div>
     </div>
   </div>
 </template>
@@ -127,7 +128,24 @@ export default {
 
   .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 50px auto 0;
+    padding-bottom: 30px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .button {
+      position: absolute;
+      top: -70px;
+      left: -10px;
+
+      h1 {
+        background-color: #097ff9;
+        padding: 3px 5px;
+      }
+    }
 
     .container-cards {
       display: flex;
@@ -136,8 +154,12 @@ export default {
       gap: 30px;
     }
 
-    h1 {
-      color: white;
+    .button-loading {
+      h3 {
+        background-color: #097ff9;
+        text-align: center;
+        padding: 3px 5px;
+      }
     }
   }
 }
